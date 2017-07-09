@@ -1,3 +1,9 @@
 {
-  "Coming soon...": true
+  "basic-colors": {
+    "primary": "#0e74cf",
+    "sucess": "8b5",
+    "warn": "#eb3",
+    "danger": "#c31",
+    "info": "#58c2db"
+  }
 }
