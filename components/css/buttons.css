@@ -1,9 +1,15 @@
+body {
+  padding: 20em;
+  text-align: center;
+  font-size: 16px;
+}
+
 /*
  ********************
  *! Buttons Styles !*
  ********************
  */
- 
+
 /**
  *! Buttons CSS - Part 1.
  *! Normal Buttons.
@@ -18,14 +24,13 @@
  * .btn-info
  */
 
-[class*="btn-"],
 .btn {
-  font-size: inherit;
+  font-size: .95em;
   display: inline-block;
   background: #eeeeee;
   border: solid 1px #ccc;
   color: #333;
-  padding: .7em 1.275em;
+  padding: .65em 1.25em;
   border-radius: .2em;
   white-space: nowrap;
   text-align: center;
@@ -42,6 +47,24 @@
   -ms-transition: all .175s linear;
   -o-transition: all .175s linear;
   transition: all .175s linear;
+}
+
+.btn.gradient,
+.btn-primary.gradient,
+.btn-sucess.gradient,
+.btn-warn.gradient,
+.btn-danger.gradient,
+.btn-info.gradient,
+.btn-primary-gradient,
+.btn-sucess-gradient,
+.btn-warn-gradient,
+.btn-danger-gradient,
+.btn-info-gradient {
+  -webkit-transition: box-shadow .175s linear;
+  -moz-transition: box-shadow .175s linear;
+  -ms-transition: box-shadow .175s linear;
+  -o-transition: box-shadow .175s linear;
+  transition: box-shadow .175s linear;
 }
 
 [class="btn"]:hover,
@@ -64,7 +87,8 @@
           box-shadow: 0 0 0px 2px rgba(114, 114, 114, 0.25);
 }
 
-.btn.gradient {
+.btn.gradient,
+.btn-gradient {
   border: solid 1px #c9c9c9;
   background: -webkit-linear-gradient(#f0f0f0 0%, #ddd 100%);
   background:    -moz-linear-gradient(#f0f0f0 0%, #ddd 100%);
@@ -74,7 +98,9 @@
 }
 
 .btn.gradient:hover,
-.btn.gradient.hover {
+.btn.gradient.hover,
+.btn-gradient:hover,
+.btn-gradient:hover {
   border: solid 1px #c4c4c4;
   background: -webkit-linear-gradient(#ededed 0%, #d0d0d0 100%);
   background:    -moz-linear-gradient(#ededed 0%, #d0d0d0 100%);
@@ -106,7 +132,9 @@
           box-shadow: 0 0 0px 2px rgba(32, 127, 211, 0.55);
 }
 
-.btn-primary.gradient {
+.btn-primary.gradient,
+.btn-primary-gradient {
+  color: #fff;
   border-color: #0f68b8;
   background: -webkit-linear-gradient(#0f86f0 0%, #045eaf 100%);
   background:    -moz-linear-gradient(#0f86f0 0%, #045eaf 100%);
@@ -116,7 +144,9 @@
 }
 
 .btn-primary.gradient:hover,
-.btn-primary.gradient.hover {
+.btn-primary.gradient.hover,
+.btn-primary-gradient:hover,
+.btn-primary-gradient.hover {
   border-color: #054885;
   background: -webkit-linear-gradient(#0c7bdf 0%, #034f93 100%);
   background:    -moz-linear-gradient(#0c7bdf 0%, #034f93 100%);
@@ -148,7 +178,9 @@
           box-shadow: 0 0 0px 2px rgba(115, 174, 89, 0.45);
 }
 
-.btn-sucess.gradient {
+.btn-sucess.gradient,
+.btn-sucess-gradient {
+  color: #fff;
   border-color: #78ab46;
   background: -webkit-linear-gradient(#a3dc6a 0%, #5d8c2f 100%);
   background:    -moz-linear-gradient(#a3dc6a 0%, #5d8c2f 100%);
@@ -158,7 +190,9 @@
 }
 
 .btn-sucess.gradient:hover,
-.btn-sucess.gradient.hover {
+.btn-sucess.gradient.hover,
+.btn-sucess-gradient:hover,
+.btn-sucess-gradient.hover {
   border-color: #5c8931;
   background: -webkit-linear-gradient(#8fc45b 0%, #59862e 100%);
   background:    -moz-linear-gradient(#8fc45b 0%, #59862e 100%);
@@ -190,7 +224,9 @@
           box-shadow: 0 0 0px 2px rgba(235, 203, 116, 0.58);
 }
 
-.btn-warn.gradient {
+.btn-warn.gradient,
+.btn-warn-gradient {
+  color: #fff;
   border-color: #c99406;
   background: -webkit-linear-gradient(#f6cc59 0%, #c79203 100%);
   background:    -moz-linear-gradient(#f6cc59 0%, #c79203 100%);
@@ -200,7 +236,9 @@
 }
 
 .btn-warn.gradient:hover,
-.btn-warn.gradient.hover {
+.btn-warn.gradient.hover,
+.btn-warn-gradient:hover,
+.btn-warn-gradient.hover {
   border-color: #ab7d03;
   background: -webkit-linear-gradient(#fbca42 0%, #ab7d03 100%);
   background:    -moz-linear-gradient(#fbca42 0%, #ab7d03 100%);
@@ -232,7 +270,9 @@
           box-shadow: 0 0 0px 2px rgba(236, 125, 100, 0.52);
 }
 
-.btn-danger.gradient {
+.btn-danger.gradient,
+.btn-danger-gradient {
+  color: #fff;
   border-color: #b53214;
   background: -webkit-linear-gradient(#fe613e 0%, #a72b0f 100%);
   background:    -moz-linear-gradient(#fe613e 0%, #a72b0f 100%);
@@ -242,7 +282,9 @@
 }
 
 .btn-danger.gradient:hover,
-.btn-danger.gradient.hover {
+.btn-danger.gradient.hover,
+.btn-danger-gradient:hover,
+.btn-danger-gradient.hover {
   border-color: #a72b0f;
   background: -webkit-linear-gradient(#ec5432 0%, #8d2109 100%);
   background:    -moz-linear-gradient(#ec5432 0%, #8d2109 100%);
@@ -274,7 +316,9 @@
   box-shadow: 0 0 0px 2px rgba(139, 218, 236, 0.66);
 }
 
-.btn-info.gradient {
+.btn-info.gradient,
+.btn-info-gradient {
+  color: #fff;
   border-color: #429fb5;
   background: -webkit-linear-gradient(#80d4e8 0%, #44a1b7 100%);
   background:    -moz-linear-gradient(#80d4e8 0%, #44a1b7 100%);
@@ -284,11 +328,284 @@
 }
 
 .btn-info.gradient:hover,
-.btn-info.gradient.hover {
+.btn-info.gradient.hover,
+.btn-info-gradient:hover,
+.btn-info-gradient.hover {
   border-color: #44a1b7;
   background: -webkit-linear-gradient(#70c4d8 0%, #378da1 100%);
   background:    -moz-linear-gradient(#70c4d8 0%, #378da1 100%);
   background:     -ms-linear-gradient(#70c4d8 0%, #378da1 100%);
   background:      -o-linear-gradient(#70c4d8 0%, #378da1 100%);
   background:         linear-gradient(#70c4d8 0%, #378da1 100%);
+}
+
+
+/**
+ *! Buttons CSS - Part 2.
+ *! Outlined Buttons.
+ *
+ *  Contents:
+ *
+ * .btn.outlined,
+ * .btn-primary.outlined,
+ * .btn-sucess.outlined,
+ * .btn-warn.outlined,
+ * .btn-danger.outlined,
+ * .btn-info.outlined
+ */
+
+.btn.outlined,
+.btn-outlined {
+  border: solid 1px #d5d5d5;
+  background-color: #fff;
+  color: #333;
+}
+
+.btn.outlined:hover,
+.btn.outlined.hover,
+.btn-outlined:hover,
+.btn-outlined.hover {
+  border: solid 1px #d5d5d5;
+  background-color: #d5d5d5;
+  color: #333;
+}
+
+.btn-primary.outlined,
+.btn-primary-outlined {
+  background: #fff;
+  border-color: #0e74cf;
+  color: #0e74cf;
+}
+
+.btn-primary.outlined:hover,
+.btn-primary.outlined.hover,
+.btn-primary-outlined:hover,
+.btn-primary-outlined.hover {
+  background-color: #0e74cf;
+  border-color: #0e74cf;
+  color: #fff;
+}
+
+.btn-primary.outlined.gradient:hover,
+.btn-primary.outlined.gradient.hover,
+.btn-primary-outlined.gradient:hover,
+.btn-primary-outlined.gradient.hover,
+.btn-primary-outlined.btn-primary-gradient:hover,
+.btn-primary-outlined.btn-primary-gradient.hover {
+  border-color: #0f68b8;
+  background: -webkit-linear-gradient(#0f86f0 0%, #045eaf 100%);
+  background:    -moz-linear-gradient(#0f86f0 0%, #045eaf 100%);
+  background:     -ms-linear-gradient(#0f86f0 0%, #045eaf 100%);
+  background:      -o-linear-gradient(#0f86f0 0%, #045eaf 100%);
+  background:         linear-gradient(#0f86f0 0%, #045eaf 100%);
+  color: #fff;
+}
+
+.btn-sucess.outlined,
+.btn-sucess-outlined {
+  background: #fff;
+  border-color: #8b5;
+  color: #8b5;
+}
+
+.btn-sucess.outlined:hover,
+.btn-sucess.outlined.hover,
+.btn-sucess-outlined:hover,
+.btn-sucess-outlined.hover {
+  background-color: #8b5;
+  border-color: #8b5;
+  color: #fff;
+}
+
+.btn-sucess.outlined.gradient:hover,
+.btn-sucess.outlined.gradient.hover,
+.btn-sucess-outlined.gradient:hover,
+.btn-sucess-outlined.gradient.hover,
+.btn-sucess-outlined.btn-sucess-gradient:hover,
+.btn-sucess-outlined.btn-sucess-gradient.hover {
+  border-color: #78ab46;
+  background: -webkit-linear-gradient(#a3dc6a 0%, #5d8c2f 100%);
+  background:    -moz-linear-gradient(#a3dc6a 0%, #5d8c2f 100%);
+  background:     -ms-linear-gradient(#a3dc6a 0%, #5d8c2f 100%);
+  background:      -o-linear-gradient(#a3dc6a 0%, #5d8c2f 100%);
+  background:         linear-gradient(#a3dc6a 0%, #5d8c2f 100%);
+  color: #fff;
+}
+
+.btn-warn.outlined,
+.btn-warn-outlined {
+  background: #fff;
+  border-color: #eb3;
+  color: #eb3;
+}
+
+.btn-warn.outlined:hover,
+.btn-warn.outlined.hover,
+.btn-warn-outlined:hover,
+.btn-warn-outlined.hover {
+  background-color: #eb3;
+  border-color: #eb3;
+  color: #fff;
+}
+
+.btn-warn.outlined.gradient:hover,
+.btn-warn.outlined.gradient.hover,
+.btn-warn-outlined.gradient:hover,
+.btn-warn-outlined.gradient.hover,
+.btn-warn-outlined.btn-warn-gradient:hover,
+.btn-warn-outlined.btn-warn-gradient.hover {
+  border-color: #c99406;
+  background: -webkit-linear-gradient(#f6cc59 0%, #c79203 100%);
+  background:    -moz-linear-gradient(#f6cc59 0%, #c79203 100%);
+  background:     -ms-linear-gradient(#f6cc59 0%, #c79203 100%);
+  background:      -o-linear-gradient(#f6cc59 0%, #c79203 100%);
+  background:         linear-gradient(#f6cc59 0%, #c79203 100%);
+  color: #fff;
+}
+
+.btn-danger.outlined,
+.btn-danger-outlined {
+  background: #fff;
+  border-color: #c31;
+  color: #c31;
+}
+
+.btn-danger.outlined:hover,
+.btn-danger.outlined.hover,
+.btn-danger-outlined:hover,
+.btn-danger-outlined.hover {
+  background-color: #c31;
+  border-color: #c31;
+  color: #fff;
+}
+
+.btn-danger.outlined.gradient:hover,
+.btn-danger.outlined.gradient.hover,
+.btn-danger-outlined.gradient:hover,
+.btn-danger-outlined.gradient.hover,
+.btn-danger-outlined.btn-danger-gradient:hover,
+.btn-danger-outlined.btn-danger-gradient.hover {
+  border-color: #b53214;
+  background: -webkit-linear-gradient(#fe613e 0%, #a72b0f 100%);
+  background:    -moz-linear-gradient(#fe613e 0%, #a72b0f 100%);
+  background:     -ms-linear-gradient(#fe613e 0%, #a72b0f 100%);
+  background:      -o-linear-gradient(#fe613e 0%, #a72b0f 100%);
+  background:         linear-gradient(#fe613e 0%, #a72b0f 100%);
+  color: #fff;
+}
+
+.btn-info.outlined,
+.btn-info-outlined {
+  background: #fff;
+  border-color: #58c2db;
+  color: #58c2db;
+}
+
+.btn-info.outlined:hover,
+.btn-info.outlined.hover,
+.btn-info-outlined:hover,
+.btn-info-outlined.hover {
+  background-color: #58c2db;
+  border-color: #58c2db;
+  color: #fff;
+}
+
+.btn-info.outlined.gradient:hover,
+.btn-info.outlined.gradient.hover,
+.btn-info-outlined.gradient:hover,
+.btn-info-outlined.gradient.hover,
+.btn-info-outlined.btn-info-gradient:hover,
+.btn-info-outlined.btn-info-gradient.hover {
+  border-color: #429fb5;
+  background: -webkit-linear-gradient(#80d4e8 0%, #44a1b7 100%);
+  background:    -moz-linear-gradient(#80d4e8 0%, #44a1b7 100%);
+  background:     -ms-linear-gradient(#80d4e8 0%, #44a1b7 100%);
+  background:      -o-linear-gradient(#80d4e8 0%, #44a1b7 100%);
+  background:         linear-gradient(#80d4e8 0%, #44a1b7 100%);
+  color: #fff;
+}
+
+
+/**
+ *! Buttons CSS - Part 3.
+ *! Button Group.
+ *
+ *  Contents:
+ *
+ * .btn-group,
+ * .btn-group-sm,
+ * .btn-group-md,
+ * .btn-group-lg
+ */
+
+.btn-group {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  border: solid 1px transparent;
+}
+
+.btn-group > .btn {
+  float: left;
+  border-radius: 0;
+}
+
+.btn-group > .btn:first-child {
+  border-radius: .2em 0 0 .2em;
+}
+
+.btn-group > .btn:last-child {
+  border-radius: 0 .2em .2em 0;
+}
+
+
+/**
+ *! Buttons CSS - Part 4.
+ *! Button Sizes.
+ *
+ *  Contents:
+ *,
+ * .btn-sm,
+ * .btn-md,
+ * .btn-lg
+ */
+
+.btn-sm,
+.btn-group-sm > .btn {
+  padding: .4em .8em;
+  font-size: .85em;
+}
+
+.btn-md,
+.btn-group-md > .btn {
+  padding: .65em 1.25em;
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: .775em 1.6em;
+  font-size: 1.175em;
+  font-weight: 400;
+}
+
+
+/**
+ *! Buttons CSS - Part 5.
+ *! Extra.
+ */
+
+
+.btn[disabled],
+.btn.disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+.btn[disabled]:focus,
+.btn.disabled:focus {
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+      -ms-box-shadow: none;
+       -o-box-shadow: none;
+          box-shadow: none;
 }
